@@ -157,7 +157,7 @@
         <micrometer.version>1.12.8</micrometer.version>
         
         <!-- native -->
-        <native-maven-plugin.version>0.10.4</native-maven-plugin.version>
+        <native-maven-plugin.version>0.10.2</native-maven-plugin.version>
     </properties>
     <!-- == -->
     <!-- =========================================================Build plugins================================================ -->

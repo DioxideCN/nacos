@@ -18,6 +18,15 @@
   "name":"[J"
 },
 {
+  "name":"[Lcom.alibaba.nacos.shaded.org.checkerframework.framework.qual.LiteralKind;"
+},
+{
+  "name":"[Lcom.alibaba.nacos.shaded.org.checkerframework.framework.qual.TypeKind;"
+},
+{
+  "name":"[Lcom.alibaba.nacos.shaded.org.checkerframework.framework.qual.TypeUseLocation;"
+},
+{
   "name":"[Lcom.fasterxml.jackson.annotation.JsonSubTypes$Type;"
 },
 {
@@ -52,6 +61,9 @@
 },
 {
   "name":"[Ljava.lang.annotation.Annotation;"
+},
+{
+  "name":"[Ljava.lang.annotation.ElementType;"
 },
 {
   "name":"[Ljava.lang.reflect.Constructor;"
@@ -4053,6 +4065,141 @@
   "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
 },
 {
+  "name":"com.alibaba.nacos.shaded.com.google.common.base.ElementTypesAreNonnullByDefault",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.base.ParametricNullness",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.cache.ElementTypesAreNonnullByDefault",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.collect.ElementTypesAreNonnullByDefault",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.collect.ParametricNullness",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.hash.ElementTypesAreNonnullByDefault",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.io.ElementTypesAreNonnullByDefault",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.io.ParametricNullness",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.math.ElementTypesAreNonnullByDefault",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.primitives.ElementTypesAreNonnullByDefault",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.util.concurrent.ElementTypesAreNonnullByDefault",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.common.util.concurrent.ParametricNullness",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.errorprone.annotations.CheckReturnValue",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.errorprone.annotations.DoNotMock",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.errorprone.annotations.Immutable",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.com.google.protobuf.CheckReturnValue",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.ChannelHandler$Sharable",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.ChannelHandlerMask$Skip",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.javax.annotation.CheckForNull",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.javax.annotation.CheckReturnValue",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.javax.annotation.Nonnull",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.javax.annotation.Nullable",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.javax.annotation.ParametersAreNonnullByDefault"
+},
+{
+  "name":"com.alibaba.nacos.shaded.javax.annotation.meta.TypeQualifier",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.javax.annotation.meta.TypeQualifierDefault",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.javax.annotation.meta.When"
+},
+{
+  "name":"com.alibaba.nacos.shaded.org.checkerframework.framework.qual.DefaultFor",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.org.checkerframework.framework.qual.DefaultQualifierInHierarchy",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.org.checkerframework.framework.qual.LiteralKind"
+},
+{
+  "name":"com.alibaba.nacos.shaded.org.checkerframework.framework.qual.MonotonicQualifier",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.org.checkerframework.framework.qual.QualifierForLiterals",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.org.checkerframework.framework.qual.SubtypeOf",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.alibaba.nacos.shaded.org.checkerframework.framework.qual.TypeKind"
+},
+{
+  "name":"com.alibaba.nacos.shaded.org.checkerframework.framework.qual.TypeUseLocation"
+},
+{
+  "name":"com.alibaba.nacos.shaded.org.checkerframework.framework.qual.UpperBoundFor",
+  "queryAllDeclaredMethods":true
+},
+{
   "name":"com.alibaba.nacos.sys.env.EnvModuleStateBuilder"
 },
 {
@@ -6523,6 +6670,9 @@
 {
   "name":"java.lang.annotation.Documented",
   "queryAllDeclaredMethods":true
+},
+{
+  "name":"java.lang.annotation.ElementType"
 },
 {
   "name":"java.lang.annotation.Inherited",
