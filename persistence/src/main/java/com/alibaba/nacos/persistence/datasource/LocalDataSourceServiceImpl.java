@@ -215,10 +215,10 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
         List<String> sqlList = new ArrayList<>();
         InputStream sqlFileIn = null;
         try {
-            final String derbySQLPath = EnvUtil.getNacosHome() + File.separator + "conf" + File.separator + "derby-schema.sql";
-            LOGGER.info("Loading derby-schema.sql from {}", derbySQLPath);
+            final String derbyPath = EnvUtil.getNacosHome() + File.separator + "conf" + File.separator + "derby-schema.sql";
+            LOGGER.info("Loading derby-schema.sql from {}", derbyPath);
             File file = new File(
-                    derbySQLPath);
+                    derbyPath);
             if (StringUtils.isBlank(EnvUtil.getNacosHome()) || !file.exists()) {
                 ClassLoader classLoader = getClass().getClassLoader();
                 URL url = classLoader.getResource(sqlFile);
