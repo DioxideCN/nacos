@@ -527,6 +527,8 @@
   }, {
     "pattern":"\\Qcom/alibaba/nacos/core/remote/grpc/GrpcSdkServer.class\\E"
   }, {
+    "pattern":"\\Qcom/alibaba/nacos/core/remote/grpc/InvokeSource.class\\E"
+  }, {
     "pattern":"\\Qcom/alibaba/nacos/core/remote/grpc/RemoteParamCheckFilter.class\\E"
   }, {
     "pattern":"\\Qcom/alibaba/nacos/core/service/NacosClusterOperationService.class\\E"

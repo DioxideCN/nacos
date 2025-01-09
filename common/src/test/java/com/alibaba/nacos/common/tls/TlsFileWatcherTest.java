@@ -73,38 +73,30 @@ class TlsFileWatcherTest {
         Method getDeclaredFields0 = Class.class.getDeclaredMethod("getDeclaredFields0", boolean.class);
         getDeclaredFields0.setAccessible(true);
         Field[] fields = (Field[]) getDeclaredFields0.invoke(Field.class, false);
-        Field modifiersField1 = null;
+
+        Field modifiersField = null;
         for (Field each : fields) {
             if ("modifiers".equals(each.getName())) {
-                modifiersField1 = each;
+                modifiersField = each;
             }
         }
-        if (modifiersField1 != null)         {
-            modifiersField1.setAccessible(true);
-            modifiersField1.setInt(watchFilesMapField, watchFilesMapField.getModifiers() & ~Modifier.FINAL);
+
+        if (modifiersField == null) {
+            throw new NoSuchFieldException("modifiersField");
         }
-        
+        modifiersField.setAccessible(true);
+
+        modifiersField.setInt(watchFilesMapField, watchFilesMapField.getModifiers() & ~Modifier.FINAL);
         fileMd5MapField = TlsFileWatcher.getInstance().getClass().getDeclaredField("fileMd5Map");
         fileMd5MapField.setAccessible(true);
         
         serviceField = TlsFileWatcher.getInstance().getClass().getDeclaredField("service");
         serviceField.setAccessible(true);
-        Field modifiersField2 = null;
-        for (Field each : fields) {
-            if ("modifiers".equals(each.getName())) {
-                modifiersField2 = each;
-            }
-        }
-        if (modifiersField2 != null) {
-            modifiersField2.setAccessible(true);
-            modifiersField2.setInt(watchFilesMapField, watchFilesMapField.getModifiers() & ~Modifier.FINAL);
-        }
+        modifiersField.setInt(watchFilesMapField, watchFilesMapField.getModifiers() & ~Modifier.FINAL);
         
         startedField = TlsFileWatcher.getInstance().getClass().getDeclaredField("started");
         startedField.setAccessible(true);
-        Field modifiersField3 = Field.class.getDeclaredField("modifiers");
-        modifiersField3.setAccessible(true);
-        modifiersField3.setInt(watchFilesMapField, watchFilesMapField.getModifiers() & ~Modifier.FINAL);
+        modifiersField.setInt(watchFilesMapField, watchFilesMapField.getModifiers() & ~Modifier.FINAL);
     }
     
     @BeforeEach

@@ -1615,7 +1615,7 @@
   "name":"com.alibaba.nacos.consistency.ConsistencyProtocol",
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
-  "methods":[{"name":"aGetData","parameterTypes":["com.alibaba.nacos.consistency.entity.ReadRequest"] }, {"name":"addRequestProcessors","parameterTypes":["java.util.Collection"] }, {"name":"getData","parameterTypes":["com.alibaba.nacos.consistency.entity.ReadRequest"] }, {"name":"init","parameterTypes":["com.alibaba.nacos.consistency.Config"] }, {"name":"memberChange","parameterTypes":["java.util.Set"] }, {"name":"protocolMetaData","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }, {"name":"write","parameterTypes":["com.alibaba.nacos.consistency.entity.WriteRequest"] }, {"name":"writeAsync","parameterTypes":["com.alibaba.nacos.consistency.entity.WriteRequest"] }]
+  "methods":[{"name":"aGetData","parameterTypes":["com.alibaba.nacos.consistency.entity.ReadRequest"] }, {"name":"addRequestProcessors","parameterTypes":["java.util.Collection"] }, {"name":"getData","parameterTypes":["com.alibaba.nacos.consistency.entity.ReadRequest"] }, {"name":"init","parameterTypes":["com.alibaba.nacos.consistency.Config"] }, {"name":"isReady","parameterTypes":[] }, {"name":"memberChange","parameterTypes":["java.util.Set"] }, {"name":"protocolMetaData","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }, {"name":"write","parameterTypes":["com.alibaba.nacos.consistency.entity.WriteRequest"] }, {"name":"writeAsync","parameterTypes":["com.alibaba.nacos.consistency.entity.WriteRequest"] }]
 },
 {
   "name":"com.alibaba.nacos.consistency.DataOperation",
@@ -2480,6 +2480,10 @@
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getRpcExecutor","parameterTypes":[] }, {"name":"rpcPortOffset","parameterTypes":[] }]
 },
 {
+  "name":"com.alibaba.nacos.core.remote.grpc.InvokeSource",
+  "queryAllDeclaredMethods":true
+},
+{
   "name":"com.alibaba.nacos.core.remote.grpc.RemoteParamCheckFilter",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
@@ -3260,7 +3264,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"init","parameterTypes":[] }, {"name":"interests","parameterTypes":["java.lang.String"] }, {"name":"matchUnlistenKey","parameterTypes":["java.lang.String"] }, {"name":"onChange","parameterTypes":["java.lang.String","com.alibaba.nacos.naming.pojo.Record"] }, {"name":"onDelete","parameterTypes":["java.lang.String"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"group","parameterTypes":[] }, {"name":"init","parameterTypes":[] }, {"name":"interests","parameterTypes":["java.lang.String"] }, {"name":"loadSnapshotOperate","parameterTypes":[] }, {"name":"matchUnlistenKey","parameterTypes":["java.lang.String"] }, {"name":"onApply","parameterTypes":["com.alibaba.nacos.consistency.entity.WriteRequest"] }, {"name":"onChange","parameterTypes":["java.lang.String","com.alibaba.nacos.naming.pojo.Record"] }, {"name":"onDelete","parameterTypes":["java.lang.String"] }, {"name":"onRequest","parameterTypes":["com.alibaba.nacos.consistency.entity.ReadRequest"] }]
 },
 {
   "name":"com.alibaba.nacos.naming.model.form.InstanceForm"
