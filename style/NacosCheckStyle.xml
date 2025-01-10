@@ -80,6 +80,9 @@
         <module name="LeftCurly"/>
         <module name="RightCurly"/>
         <module name="NeedBraces"/>
+        <module name="Instanceof">
+            <property name="allowVariable" value="true"/>
+        </module>
         
         <!-- Javadoc Checker -->
         <module name="JavadocMethod">
