@@ -103,7 +103,8 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
             if (LOGGER.isErrorEnabled()) {
                 LOGGER.error(e.getMessage(), e);
             }
-            if (e instanceof SQLException sqlException) {
+            if (e instanceof SQLException) {
+                SQLException sqlException = (SQLException) e;
                 System.out.println("[DEBUG] " + sqlException.getMessage());
             }
             throw new NacosRuntimeException(NacosException.SERVER_ERROR, "load derby-schema.sql error.", e);
