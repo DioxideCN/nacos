@@ -60,16 +60,11 @@ public class ExternalNamespacePersistServiceImpl implements NamespacePersistServ
     private final MapperManager mapperManager;
     
     public ExternalNamespacePersistServiceImpl() {
-        System.out.println("[externalOtherPersistServiceImpl] init step 1");
         this.dataSourceService = DynamicDataSource.getInstance().getDataSource();
-        System.out.println("[externalOtherPersistServiceImpl] init step 2");
         this.jt = dataSourceService.getJdbcTemplate();
-        System.out.println("[externalOtherPersistServiceImpl] init step 3");
         this.tjt = dataSourceService.getTransactionTemplate();
-        System.out.println("[externalOtherPersistServiceImpl] init step 4");
         Boolean isDataSourceLogEnable = EnvUtil
                 .getProperty(CommonConstant.NACOS_PLUGIN_DATASOURCE_LOG, Boolean.class, false);
-        System.out.println("[externalOtherPersistServiceImpl] init step 5");
         this.mapperManager = MapperManager.instance(isDataSourceLogEnable);
     }
     

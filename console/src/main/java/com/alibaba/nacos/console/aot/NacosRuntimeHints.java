@@ -579,6 +579,7 @@ public class NacosRuntimeHints implements RuntimeHintsRegistrar {
             ".*\\.woff$",
             ".*\\.woff2$",
             ".*\\.ttf$",
+            ".*\\.sql",
             "org/apache/derby/modules.properties",
             "application.properties",
     };

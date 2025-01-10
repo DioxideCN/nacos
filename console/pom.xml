@@ -263,6 +263,7 @@
                                 --enable-preview
                                 --no-fallback
                                 <!-- Resource Hints -->
+                                -H:IncludeResources='.*\.sql'
                                 -H:IncludeResources='librocksdbjni-${hints.os.rocksdb}'
                                 -H:IncludeResources='.*libnetty_transport_native_epoll_.*\.so'
                                 <!-- Runtime Hints -->
