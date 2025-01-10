@@ -88,6 +88,7 @@ public class NacosRuntimeHints implements RuntimeHintsRegistrar {
     
     // region SQL
     private final Class<?>[] sqlClasses = {
+            org.apache.derby.database.Database.class,
             org.apache.derby.impl.store.raw.data.CachedPage.class,
             org.apache.derby.catalog.types.TypesImplInstanceGetter.class,
             org.apache.derby.impl.services.uuid.BasicUUIDGetter.class,
