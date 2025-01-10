@@ -94,12 +94,15 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
         if (ds == null) {
             throw new RuntimeException("datasource is null");
         }
+        System.out.println("[DEBUG] datasource: " + ds.getClass().getName());
         try {
+            System.out.println("[DEBUG] go execute");
             execute(ds.getConnection(), "META-INF/derby-schema.sql");
         } catch (Exception e) {
             if (LOGGER.isErrorEnabled()) {
                 LOGGER.error(e.getMessage(), e);
             }
+            System.out.println("[DEBUG] exception type: " + e.getClass().getName());
             throw new NacosRuntimeException(NacosException.SERVER_ERROR, "load derby-schema.sql error.", e);
         }
     }
@@ -259,7 +262,9 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
      * @throws Exception Exception.
      */
     private void execute(Connection conn, String sqlFile) throws Exception {
+        System.out.println("[DEBUG] in execute");
         try (Statement stmt = conn.createStatement()) {
+            System.out.println("[DEBUG] finish createStatement");
             List<String> sqlList = loadSql(sqlFile);
             for (String sql : sqlList) {
                 try {
