@@ -39,6 +39,7 @@ import java.net.URL;
 import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -94,15 +95,17 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
         if (ds == null) {
             throw new RuntimeException("datasource is null");
         }
-        System.out.println("[DEBUG] datasource: " + ds.getClass().getName());
         try {
-            System.out.println("[DEBUG] go execute");
-            execute(ds.getConnection(), "META-INF/derby-schema.sql");
+            // HikariDataSource::getConnection
+            final Connection connection = ds.getConnection();
+            execute(connection, "META-INF/derby-schema.sql");
         } catch (Exception e) {
             if (LOGGER.isErrorEnabled()) {
                 LOGGER.error(e.getMessage(), e);
             }
-            System.out.println("[DEBUG] exception type: " + e.getClass().getName());
+            if (e instanceof SQLException sqlException) {
+                System.out.println("[DEBUG] " + sqlException.getMessage());
+            }
             throw new NacosRuntimeException(NacosException.SERVER_ERROR, "load derby-schema.sql error.", e);
         }
     }
@@ -224,9 +227,6 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
             if (StringUtils.isBlank(EnvUtil.getNacosHome()) || !file.exists()) {
                 ClassLoader classLoader = getClass().getClassLoader();
                 URL url = classLoader.getResource(sqlFile);
-                if (url == null) {
-                    throw new Error("Unable to resolve inner file: derby-schema.sql");
-                }
                 sqlFileIn = url.openStream();
             } else {
                 sqlFileIn = new FileInputStream(file);
@@ -262,9 +262,7 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
      * @throws Exception Exception.
      */
     private void execute(Connection conn, String sqlFile) throws Exception {
-        System.out.println("[DEBUG] in execute");
         try (Statement stmt = conn.createStatement()) {
-            System.out.println("[DEBUG] finish createStatement");
             List<String> sqlList = loadSql(sqlFile);
             for (String sql : sqlList) {
                 try {
