@@ -216,12 +216,13 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
         InputStream sqlFileIn = null;
         try {
             final String derbyPath = EnvUtil.getNacosHome() + File.separator + "conf" + File.separator + "derby-schema.sql";
-            LOGGER.info("Loading derby-schema.sql from {}", derbyPath);
+            System.out.println("Loading derby-schema.sql from " + derbyPath);
             File file = new File(
                     derbyPath);
             if (StringUtils.isBlank(EnvUtil.getNacosHome()) || !file.exists()) {
                 ClassLoader classLoader = getClass().getClassLoader();
                 URL url = classLoader.getResource(sqlFile);
+                System.out.println("sqlFile url " + url);
                 if (url == null) {
                     throw new Error("Unable to resolve inner file: derby-schema.sql");
                 }
