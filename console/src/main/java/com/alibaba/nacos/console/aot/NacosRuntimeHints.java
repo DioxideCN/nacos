@@ -351,6 +351,12 @@ public class NacosRuntimeHints implements RuntimeHintsRegistrar {
             org.apache.derby.impl.sql.execute.MatchingClauseConstantAction.class,
             org.apache.derby.impl.sql.execute.MergeConstantAction.class,
 
+            // hard code
+            Class.forName("org.apache.derby.impl.services.monitor.ModuleInstance"),
+            Class.forName("org.apache.derby.impl.services.monitor.ProtocolKey"),
+            Class.forName("org.apache.derby.impl.services.monitor.TopService"),
+            Class.forName("org.apache.derby.iapi.services.cache.ClassSizeCatalogImpl"),
+
             com.alibaba.nacos.persistence.datasource.ExternalDataSourceProperties.class
     };
     // endregion
