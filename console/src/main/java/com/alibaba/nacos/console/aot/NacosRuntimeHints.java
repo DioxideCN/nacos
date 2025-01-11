@@ -749,6 +749,7 @@ public class NacosRuntimeHints implements RuntimeHintsRegistrar {
     private final String[] resourcePattern = {
             AotConfiguration.reflectToNativeLibraryLoader(),
             "application.properties",
+            "META-INF/derby-schema.sql",
             ".*libnetty_transport_native_epoll_.*\\.so",
             ".*\\.desc$",
             ".*\\.html$",
@@ -761,7 +762,6 @@ public class NacosRuntimeHints implements RuntimeHintsRegistrar {
             ".*\\.woff$",
             ".*\\.woff2$",
             ".*\\.ttf$",
-            ".*\\.sql",
             "org/apache/derby/modules.properties",
             "org/apache/derby/impl/jdbc/metadata.properties",
             "org/apache/derby/impl/sql/catalog/metadata_net.properties",
