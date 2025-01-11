@@ -224,9 +224,6 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
             if (StringUtils.isBlank(EnvUtil.getNacosHome()) || !file.exists()) {
                 ClassLoader classLoader = getClass().getClassLoader();
                 URL url = classLoader.getResource(sqlFile);
-                if (url == null) {
-                    throw new Error("Can't find " + sqlFile);
-                }
                 try {
                     sqlFileIn = url.openStream();
                 } catch (IOException e) {
