@@ -228,7 +228,6 @@ public class LocalDataSourceServiceImpl implements DataSourceService {
                     sqlFileIn = url.openStream();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
-                } finally {
                 }
             } else {
                 sqlFileIn = new FileInputStream(file);
