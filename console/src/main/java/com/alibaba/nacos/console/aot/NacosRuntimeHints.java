@@ -322,6 +322,8 @@ public class NacosRuntimeHints implements RuntimeHintsRegistrar {
             Class.forName("org.apache.derby.iapi.services.cache.ClassSizeCatalogImpl"),
             Class.forName("org.apache.derby.impl.sql.compile.TableElementNode"),
             Class.forName("org.apache.derby.impl.sql.compile.ResultColumn"),
+            Class.forName("org.apache.derby.impl.sql.compile.MaxMinAggregateDefinition"),
+            Class.forName("org.apache.derby.impl.sql.execute.MaxMinAggregator"),
             // nacos derby reflection
             com.alibaba.nacos.persistence.datasource.ExternalDataSourceProperties.class
     };
